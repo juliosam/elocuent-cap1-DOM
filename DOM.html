@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>El Document Object Model</h1>
+    <p>
+        Los programas de JavaScript podrian inspeccionar e interferir con el 
+        documento desplegado por medio de una estructura de datos llamada DOM.
+        Esta estructura de datos representa el modelo de navegador del documento,
+        y un programa de Javascript podria modificarlo para cambiar el documento 
+        visible.
+    </p>
+    <p>
+        El DOM se organiza como un arbol, en donde los elementos se ordenan por 
+        jerarquia de acuerdo a la estructura del documento. Estos elementos 
+        representan objetos que tienen propiedades como parentNode y childNode, que 
+        pueden ser usadas para navegar atraves del "arbol". Para ilustrar esto se
+        puede decir que document es la variable global o padre de todas y sus nodos 
+        hijos son head y body, y estos ultimos tienen sus nodos hijos cada uno. 
+    </p>
+    <p>
+        Ademas de parentNode y childNode tambien existe firstChild, lastChild
+        previousSibiling y nextSibiling (estos ultimos se refieren a elementos 
+        "hermanos") para navegar por el DOM y apuntar al elemento deseado. Pero 
+        hay ocaciones en las que encontrar un elemento de esta manera ya no es 
+        eficiente por lo que se utilizan metodos como getElementByTagName o
+        querySelector con los que se puede relacionar un elemento a su selector.
+    </p>
+    <p>
+        El DOM no fue diseñado exclusivamente para JavaScrip, ni para HTML, por lo
+        que algunas veces no tiene una sintaxis de acuerdo los mencionados. Como 
+        ejemplo de esta pobre integracion esta la propiedad childNodes que tienen
+        los elementos del DOM y que guardan un objeto similar a un array pero que
+        se trata de una lista de nodos, por lo cual no se le pueden aplicar metodos
+        de array directamente, como map y filter. 
+    </p>
+    <p>
+        La forma en que un documento es desplegado se pude influenciar por styling,
+        tanto agregando estilos a los nodos directamente, como definiendo reglas 
+        que puden coincidir con ciertos nodos y asi estilizarlos. Hay muchas 
+        propiedades diferentes de estilos como color o display. El codigo de 
+        JavaScript puede manipular el estilo de un elemento directamente, mediante 
+        su propiedad style.
+    </p>
+    <p>
+        Tambien es posible agregar atributos a los elementos del DOM, guardando asi
+        informacion extra en el documento. Ademas de que facilita el agregado de 
+        efectos interactivos mediante JavaScript.
+    </p>
+
+</body>
+</html>
